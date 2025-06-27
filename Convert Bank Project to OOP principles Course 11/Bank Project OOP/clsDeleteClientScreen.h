@@ -64,11 +64,6 @@ public:
 
 	}
 
-	void PrintClientRecordBalanceLine(clsBankClient Client)
-	{
-		cout << "| " << left << setw(15) << Client.AccountNumber;
-		cout << "| " << left << setw(40) << Client.FullName;
-		cout << "| " << left << setw(12) << Client.AccountBalance;
-	}
+	
 };
 
