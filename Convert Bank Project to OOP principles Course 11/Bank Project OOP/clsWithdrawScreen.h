@@ -3,7 +3,7 @@
 #include"clsScreen.h"
 #include"clsBankClient.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
-class clsDepositScreen : protected clsScreen
+class clsWithdrawScreen: protected clsScreen
 {
 private:
 
@@ -22,12 +22,11 @@ private:
 		cout << "\n___________________________\n";
 	}
 
-
 public:
 
-	static void ShowDepositScreen()
+	static void ShowWithdrawScreen()
 	{
-		_DrawScreenHeader("\t Deposit Screen");
+		_DrawScreenHeader("\t Withdraw Screen");
 
 		cout << "Please Enter Account Number  ";
 		string AccountNumber = "";
@@ -45,8 +44,8 @@ public:
 		_PrintClient(Client1);
 
 		double Amount = 0;
-		cout << "\nPlease Enter deposit amount ?  ";
-		Amount = clsInputValidate::ReadPostiveDblNumber("Deposit Amount Must be positive!  ");
+		cout << "\nPlease Enter Withdraw amount ?  ";
+		Amount = clsInputValidate::ReadPostiveDblNumber("Withdraw Amount Must be positive!  ");
 
 		cout << "\nAre you sure you want to perform this transaction y/n ?  ";
 		char Answer = 'n';
@@ -54,9 +53,17 @@ public:
 
 		if (toupper(Answer) == 'Y')
 		{
-			Client1.Deposit(Amount);
-			cout << "\nAmount Deposited successfully :-) . \n";
-			cout << "New Balance is " << Client1.AccountBalance;
+			if (Client1.Withdraw(Amount))
+			{
+				cout << "\nAmount Withdrawed successfully :-) . \n";
+				cout << "New Balance is " << Client1.AccountBalance;
+			}
+			else
+			{
+				cout << "cannot to withdraw, Insuffecient balance! \n";
+				cout << "\n\nAmount to withdraw " << Amount << "\n";
+				cout << "your Balance is " << Client1.AccountBalance;
+			}
 		}
 		else
 		{
