@@ -3,6 +3,7 @@
 #include"clsScreen.h"
 #include<iomanip>
 #include"clsBankClient.h"
+#include"clsDepositScreen.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
 using namespace std;
 class clsTransactionScreen : protected clsScreen
@@ -24,7 +25,7 @@ private:
 	// we call those kind of functions stabs ,because they don't contain implementation. 
 	static void _ShowDepositScreen()
 	{
-		cout << "\nDeposit Screen will be here soon ...";  //1
+		clsDepositScreen::ShowDepositScreen();
 	}
 
 	static void _ShowWithdrawScreen()
