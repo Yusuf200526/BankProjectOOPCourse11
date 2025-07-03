@@ -1,11 +1,13 @@
 #pragma once
 #include<iostream>
-#include"clsScreen.h"
 #include<iomanip>
+#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
 #include"clsBankClient.h"
+#include"clsScreen.h"
 #include"clsDepositScreen.h"
 #include"clsWithdrawScreen.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"clsTotalBalancesScreen.h"
+
 using namespace std;
 class clsTransactionScreen : protected clsScreen
 {
@@ -36,9 +38,9 @@ private:
 
 	static void _ShowTotalBalancesScreen()
 	{
-		cout << "\Total Balances Screen will be here soon ..."; //3
+		//cout << "\Total Balances Screen will be here soon ..."; //3
+		clsTotalBalancesScreen::ShowTotalBalances();
 	}
-	/////////////////////////////////////////////////////////////
 
 	static void _GoBackToTransactionMenue()
 	{
@@ -76,7 +78,6 @@ private:
 		}
 		case enTransactionMenueOptions::eShowMainMenue:
 		{
-			system("cls");
 			// Do nothing here tha main screen will hundle it soon :-) ;
 		}
 		}

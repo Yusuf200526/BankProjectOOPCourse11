@@ -111,12 +111,14 @@ private:
 		{
 			system("cls");
 			_ShowTransactionMenue();
+			_GoBackToMainMenue();
 			break;
 		}
 		case enMainMenueOptions::eShowManageUsersMenue:
 		{
 			system("cls");
 			_ShowManageUsersMenue();
+			_GoBackToMainMenue();
 			break;
 		}
 		case enMainMenueOptions::eLogout:
