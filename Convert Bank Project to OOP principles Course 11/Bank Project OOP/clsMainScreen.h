@@ -7,6 +7,7 @@
 #include"clsUpdateClientScreen.h"
 #include"clsFindClientScreen.h"
 #include"clsTransactionScreen.h"
+#include"clsManageUsersScreen.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
 using namespace std;
 class clsMainScreen : protected clsScreen
@@ -19,7 +20,7 @@ private:
 
 	static short _ReadMainMenueOption()
 	{
-		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 8] \n";
+		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 8]? ";
 		return clsInputValidate::ReadIntNumberBetween(1, 8, "Choose from 1 to 8 only ");
 	}
 
@@ -63,7 +64,8 @@ private:
 
 	static void _ShowManageUsersMenue()
 	{
-		cout << " Manage users Menue screeen will be here soon \n";
+		/*cout << " Manage users Menue screeen will be here soon \n";*/
+		clsManageUsersScreen::ShowManageUsersMenue();
 	}
 
 
@@ -138,7 +140,7 @@ public:
 	{
 		system("cls");
 
-		_DrawScreenHeader("\t\tMain Menue");
+		_DrawScreenHeader("\t\tMain Screen");
 
 		cout << setw(37) << left << "" << "=========================================\n";
 		cout << setw(37) << left << "" << "\t\t  Main Menue Screen\n";

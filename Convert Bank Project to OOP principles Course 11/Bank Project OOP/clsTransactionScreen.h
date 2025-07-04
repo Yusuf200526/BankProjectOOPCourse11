@@ -21,11 +21,11 @@ private:
 
 	static short _ReadTransactionMenueOption()
 	{
-		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 4] \n";
+		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 4]?  ";
 		return clsInputValidate::ReadIntNumberBetween(1, 4, "Choose from 1 to 8 only ");
 	}
 
-	// we call those kind of functions stabs ,because they don't contain implementation. 
+	 
 	static void _ShowDepositScreen()
 	{
 		clsDepositScreen::ShowDepositScreen();
@@ -38,7 +38,6 @@ private:
 
 	static void _ShowTotalBalancesScreen()
 	{
-		//cout << "\Total Balances Screen will be here soon ..."; //3
 		clsTotalBalancesScreen::ShowTotalBalances();
 	}
 
