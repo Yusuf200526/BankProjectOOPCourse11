@@ -55,3 +55,6 @@ packages/
 *.dylib
 *.obj
 *.o
+
+# Ignore my client list (used only for learning)
+Bank Project OOP/Clients.txt
