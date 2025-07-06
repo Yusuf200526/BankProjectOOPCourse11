@@ -3,6 +3,7 @@
 #include<iomanip>
 #include"clsScreen.h"
 #include"clsListUserScreen.h"
+#include"clsAddNewUserScreen.h"
 #include"C:\Users\YUSUF\source\repos\Libraries\clsInputValidate.h"
 class clsManageUsersScreen : protected clsScreen
 {
@@ -34,7 +35,8 @@ private:// Abstracted // Built skeleton of the manage users menue screen useing 
 
 	static void _AddNewUserScreen()
 	{
-		cout << "Add New user screen will be here soon...\n";
+		//cout << "Add New user screen will be here soon...\n";
+		clsAddNewUserScreen::ShowAddUserClient();
 	}
 
 	static void _DeleteUserScreen()

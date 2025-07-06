@@ -126,6 +126,7 @@
     <ClCompile Include="Bank Project OOP.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="clsAddNewUserScreen.h" />
     <ClInclude Include="clsAddNewClientScreen.h" />
     <ClInclude Include="clsBankClient.h" />
     <ClInclude Include="clsClientListScreen.h" />
