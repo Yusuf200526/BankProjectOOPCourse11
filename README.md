@@ -82,4 +82,4 @@ This is a beginner-to-intermediate level project that simulates a simple banking
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+   git clone https://github.com/Yusuf200526/BankProjectOOPCourse11.git
