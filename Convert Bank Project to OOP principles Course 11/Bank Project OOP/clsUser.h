@@ -38,7 +38,7 @@ private:
 
 		vector <clsUser> _vUser;
 
-		MyFile.open("User.txt", ios::in);
+		MyFile.open("Users.txt", ios::in);
 
 		if (MyFile.is_open())
 		{
@@ -75,7 +75,7 @@ private:
 	{
 		fstream MyFile;
 
-		MyFile.open("User.txt", ios::app);
+		MyFile.open("Users.txt", ios::app);
 
 		if (MyFile.is_open())
 		{
@@ -96,7 +96,7 @@ private:
 	{
 		fstream MyFile;
 
-		MyFile.open("User.txt", ios::out);
+		MyFile.open("Users.txt", ios::out);
 
 		string DataLine;
 

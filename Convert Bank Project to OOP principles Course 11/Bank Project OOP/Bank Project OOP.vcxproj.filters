@@ -46,6 +46,9 @@
     <ClInclude Include="clsUser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="clsListUserScreen.h">
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
