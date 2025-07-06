@@ -64,7 +64,7 @@ This is a beginner-to-intermediate level project that simulates a simple banking
 - **Language:** C++
 - **Paradigm:** Object-Oriented Programming (OOP)
 - **Platform:** Console-based
-- **Tools:** Visual Studio / Code::Blocks / any C++ IDE
+- **Tools:** Visual Studio Community
 - **Version Control:** Git + GitHub
 
 ---
