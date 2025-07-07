@@ -52,6 +52,9 @@
     <ClInclude Include="clsAddNewUserScreen.h">
       <Filter>Header Files\User Screens</Filter>
     </ClInclude>
+    <ClInclude Include="clsDeleteUserScreen.h">
+      <Filter>Header Files\User Screens</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

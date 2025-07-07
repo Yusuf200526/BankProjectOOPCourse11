@@ -4,7 +4,7 @@
 #include<fstream>
 #include<vector>
 #include"clsPerson.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsString.h"
+//#include"C:/Users/YUSUF/source/repos/Libraries/clsString.h"
 using namespace std;
 class clsUser: public clsPerson
 {

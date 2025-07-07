@@ -4,6 +4,7 @@
 #include"clsScreen.h"
 #include"clsListUserScreen.h"
 #include"clsAddNewUserScreen.h"
+#include"clsDeleteUserScreen.h"
 #include"C:\Users\YUSUF\source\repos\Libraries\clsInputValidate.h"
 class clsManageUsersScreen : protected clsScreen
 {
@@ -41,7 +42,8 @@ private:// Abstracted // Built skeleton of the manage users menue screen useing 
 
 	static void _DeleteUserScreen()
 	{
-		cout << "Delete User Screen will be here soon...\n";
+		//cout << "Delete User Screen will be here soon...\n";
+		clsDeleteUserScreen::ShowDeleteUserScreen();
 	}
 
 	static void _UpdateUserScreen()
