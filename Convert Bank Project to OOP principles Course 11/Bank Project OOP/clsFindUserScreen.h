@@ -2,14 +2,16 @@
 #include<iostream>
 #include"clsScreen.h"
 #include"clsUser.h"
-class clsDeleteUserScreen : protected clsScreen
+#include"C:\Users\YUSUF\source\repos\Libraries\clsInputValidate.h"
+class clsFindUserScreen :protected clsScreen
 {
 private:
+
 	static void _PrintUser(clsUser User)
 	{
-		cout << "\nUser Card : ";
+		cout << "\nClient Card : ";
 		cout << "\n___________________________";
-		cout << "\nUser  Name       :" << User.UserName;
+		cout << "\nUser Name        :" << User.UserName;
 		cout << "\nFirst Name       :" << User.FirstName;
 		cout << "\nLast Name        :" << User.LastName;
 		cout << "\nFull Name        :" << User.FullName;
@@ -21,44 +23,39 @@ private:
 	}
 
 public:
-	static void ShowDeleteUserScreen()
-	{
 
-		_DrawScreenHeader("\t Delete User Screen");
+	static void ShowFindUserScreen()
+	{
+		_DrawScreenHeader("\tFind User Screen");
 
 		string UserName = "";
 
-		cout << "Please Enter User Name ";
+		cout << "Please Enter User Name  ";
+
 		UserName = clsInputValidate::ReadString();
 
 		while (!clsUser::IsUserExist(UserName))
 		{
-			cout << "User Name isn't found , Enter another one please ";
+			cout << "\nUser Name is not found , Enter another one ";
 			UserName = clsInputValidate::ReadString();
 		}
 
-		clsUser User1 = clsUser::Find(UserName);
+		clsUser User = clsUser::Find(UserName);
 
-		_PrintUser(User1);
-
-		cout << "\nAre you sure you want to delete this User y/n?  ";
-
-		char Answer = 'Y';
-		cin >> Answer;
-
-		if (toupper(Answer) == 'Y')
+		if (!User.IsEmpty())
 		{
-			if (User1.Delete())
-			{
-				cout << "\nUser Deleted successfully :-)\n";
-				_PrintUser(User1);
-			}
-			else
-			{
-				cout << "\nError User wasn't deleted\n";
-			}
+			cout << "\n\nUser Found :-) ";
+		}
+		else
+		{
+			cout << "\nUser was not Found :-(\n";
 		}
 
+
+		cout << "\n\nUser Card\n\n";
+		_PrintUser(User);
+
 	}
+
 };
 
