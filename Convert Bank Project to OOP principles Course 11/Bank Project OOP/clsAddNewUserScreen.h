@@ -42,7 +42,7 @@ private:
 
 		cout << "Do you want to give access to :\n\n";
 
-		cout << "Show Client List ? y/n? ";
+		cout << "\nShow Client List ? y/n? ";
 		cin >> Answer;
 
 		if (toupper(Answer) == 'Y')
@@ -50,7 +50,7 @@ private:
 			Permissions += clsUser::enPermissions::pListClients;
 		}
 
-		cout << " Add new Client ? y/n? ";
+		cout << "\nAdd new Client ? y/n? ";
 		cin >> Answer;
 
 		if (toupper(Answer) == 'Y')
@@ -58,7 +58,7 @@ private:
 			Permissions += clsUser::enPermissions::pAddNewClient;
 		}
 
-		cout << "Delete Client ?  y/n ? ";
+		cout << "\nDelete Client ?  y/n ? ";
 		cin >> Answer;
 
 		if (toupper(Answer) == 'Y')
@@ -66,7 +66,7 @@ private:
 			Permissions += clsUser::enPermissions::pDeleteClient;
 		}
 
-		cout << "Update Client ?  y/n ? ";
+		cout << "\nUpdate Client ?  y/n ? ";
 		cin >> Answer;
 
 		if (toupper(Answer) == 'Y')
@@ -74,7 +74,7 @@ private:
 			Permissions += clsUser::enPermissions::pUpdateClient;
 		}
 
-		cout << "Find Client ?  y/n ? ";
+		cout << "\nFind Client ?  y/n ? ";
 		cin >> Answer;
 
 		if (toupper(Answer) == 'Y')
@@ -82,7 +82,7 @@ private:
 			Permissions += clsUser::enPermissions::pFindClient;
 		}
 
-		cout << "Transactions Menue ?  y/n ? ";
+		cout << "\nTransactions Menue ?  y/n ? ";
 		cin >> Answer;
 
 		if (toupper(Answer) == 'Y')
@@ -90,7 +90,7 @@ private:
 			Permissions += clsUser::enPermissions::pTransactions;
 		}
 
-		cout << "Manage Users Menue ?  y/n ? ";
+		cout << "\nManage Users Menue ?  y/n ? ";
 		cin >> Answer;
 
 

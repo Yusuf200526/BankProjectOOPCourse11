@@ -5,6 +5,7 @@
 #include"clsListUserScreen.h"
 #include"clsAddNewUserScreen.h"
 #include"clsDeleteUserScreen.h"
+#include"clsUpdateUserScreen.h"
 #include"C:\Users\YUSUF\source\repos\Libraries\clsInputValidate.h"
 class clsManageUsersScreen : protected clsScreen
 {
@@ -48,7 +49,8 @@ private:// Abstracted // Built skeleton of the manage users menue screen useing 
 
 	static void _UpdateUserScreen()
 	{
-		cout << "Update User Screen will be here soon...\n";
+		//cout << "Update User Screen will be here soon...\n";
+		clsUpdateUserScreen::ShowUpdateUserScreen();
 	}
 
 	static void _FindUserScreen()

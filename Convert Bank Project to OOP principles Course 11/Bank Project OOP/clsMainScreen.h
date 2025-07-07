@@ -49,7 +49,7 @@ private:
 
 	static void _ShowUpdateClientScreen()
 	{
-		clsUpdateClientScreen::UpdateClient();
+		clsUpdateClientScreen::ShowUpdateClientScreen();
 	}
 
 	static void _ShowFindClientScreen()
