@@ -19,7 +19,7 @@ This is a beginner-to-intermediate level project that simulates a simple banking
 
 - `Person`: Base class for people in the system.
 - `Client`: Inherits from `Person`, represents bank clients with data like balance, account number, etc.
-- `User` *(in progress)*: Will manage system users with login credentials and possible permissions.
+- `User`: *(under development)* Represents system users with login credentials and permission roles.
 
 ### 🖥️ UI Screens
 
@@ -30,7 +30,13 @@ This is a beginner-to-intermediate level project that simulates a simple banking
   - Withdraw
   - Show total balances
   - Return to main menu
-- `ManageUsersScreen` *(in progress)*: For managing system users.
+- `ManageUsersScreen`: Manages system users, including:
+  - Show list of users
+  - Add user
+  - Delete user
+  - Update user
+  - Find user
+  - Return to main menu
 
 ### ⚙️ Business Logic (Non-UI)
 
@@ -40,40 +46,56 @@ This is a beginner-to-intermediate level project that simulates a simple banking
 
 ## ✅ Implemented Features
 
-- Show list of clients
-- Add new client
-- Delete client
-- Update client
-- Find client
-- Deposit money
-- Withdraw money
-- Show total balances
-- Navigation menu system (Main Screen)
+### 👤 Client Management
+
+- Show list of clients  
+- Add new client  
+- Delete client  
+- Update client  
+- Find client  
+
+### 💰 Banking Transactions
+
+- Deposit money  
+- Withdraw money  
+- Show total balances  
+
+### 📋 User Management
+
+- Show list of users  
+- Add user  
+- Delete user  
+- Update user  
+- Find user  
+- Return to main menu  
+
+### 🧭 Navigation
+
+- Main dashboard and navigation menu
 
 ---
 
 ## 🚧 In Progress
 
-- Manage Users Screen
-- `User` class and related features (authentication, permissions, etc.)
+- `User` class authentication system (login, permissions, roles)
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **Language:** C++
-- **Paradigm:** Object-Oriented Programming (OOP)
-- **Platform:** Console-based
-- **Tools:** Visual Studio Community
+- **Language:** C++  
+- **Paradigm:** Object-Oriented Programming (OOP)  
+- **Platform:** Console-based  
+- **Tools:** Visual Studio Community  
 - **Version Control:** Git + GitHub
 
 ---
 
 ## 🧠 What I Learned
 
-- The practical difference between Functional Programming and Object-Oriented Programming.
-- How to design and structure a real-world program using classes and inheritance.
-- Importance of separating UI from business logic.
+- The practical difference between Functional Programming and Object-Oriented Programming.  
+- How to design and structure a real-world program using classes and inheritance.  
+- Importance of separating UI from business logic.  
 - Git and GitHub usage to document, track, and share projects publicly.
 
 ---
