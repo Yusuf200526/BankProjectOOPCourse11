@@ -7,6 +7,7 @@
 #include"Global.h"
 #include <thread>
 #include <chrono>
+using namespace std;
 class clsLoginScreen : protected clsScreen
 {
 private:
@@ -51,7 +52,9 @@ private:
 
 		} while (LoginFaild);
 
+		CurrentUser.RegisterLogIn();
 		clsMainScreen::ShowMainMenue();
+		return true;
 	}
 
 	static void _SetLoginFailedColor()

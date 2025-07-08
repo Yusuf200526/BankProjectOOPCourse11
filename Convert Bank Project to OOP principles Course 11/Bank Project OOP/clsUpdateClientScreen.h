@@ -4,6 +4,7 @@
 #include<iomanip>
 #include"clsBankClient.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+using namespace std;
 class clsUpdateClientScreen :protected clsScreen
 {
 private:

@@ -8,6 +8,7 @@
 #include"clsUpdateUserScreen.h"
 #include"clsFindUserScreen.h"
 #include"C:\Users\YUSUF\source\repos\Libraries\clsInputValidate.h"
+using namespace std;
 class clsManageUsersScreen : protected clsScreen
 {
 private:// Abstracted // Built skeleton of the manage users menue screen useing stabs
