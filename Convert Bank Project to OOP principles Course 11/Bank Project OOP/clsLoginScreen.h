@@ -26,10 +26,10 @@ private:
 				_SetLoginFailedColor();
 			}
 
-			cout << "Enter User Name Please: ";
+			cout << "Enter User Name: ";
 			UserName = clsInputValidate::ReadString();
 
-			cout << "Enter Password Please: ";
+			cout << "Enter Password: ";
 			Password = clsInputValidate::ReadString();
 
 			CurrentUser = clsUser::Find(UserName, Password);
@@ -58,8 +58,9 @@ public:
 	static void ShowLoginScreen()
 	{
 		system("cls");
-		_DrawScreenHeader("\t Login Screen");
+		_DrawScreenHeader("\t  Login Screen");
 		_Login();
 	}
 };
-
+   
+   

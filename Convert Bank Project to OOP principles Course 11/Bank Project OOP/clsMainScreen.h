@@ -9,6 +9,7 @@
 #include"clsTransactionScreen.h"
 #include"clsManageUsersScreen.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"Global.h"
 using namespace std;
 class clsMainScreen : protected clsScreen
 {
@@ -66,6 +67,13 @@ private:
 	{
 		/*cout << " Manage users Menue screeen will be here soon \n";*/
 		clsManageUsersScreen::ShowManageUsersMenue();
+	}
+
+	static void _Logout()
+	{
+		CurrentUser = clsUser::Find("", "");
+
+		// then it will go back to login screen
 	}
 
 
@@ -126,7 +134,7 @@ private:
 		case enMainMenueOptions::eLogout:
 		{
 			system("cls");
-		/*	Login();*/
+			_Logout();
 			break;
 		}
 		}
