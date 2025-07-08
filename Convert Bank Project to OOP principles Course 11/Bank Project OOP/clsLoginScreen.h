@@ -11,19 +11,31 @@ class clsLoginScreen : protected clsScreen
 {
 private:
 
-	static void _Login()
+	static bool _Login()
 	{
 		string UserName;
 		string Password;
 
 		bool LoginFaild = false;
+		short FaildLoginCount = 0;
 
 		do
 		{
+			
+
 			if (LoginFaild)
 			{
-				cout << "\nInvalid UserName/Password!\n\n";
+				FaildLoginCount++;
+
+				cout << "\nInvalid UserName/Password!\n";
+				cout << "You have " << (3 - FaildLoginCount) << " Trial(s) to login.\n\n";
 				_SetLoginFailedColor();
+			}
+
+			if (FaildLoginCount == 3)
+			{
+				cout << "\n\nYou are locked after 3 faild trials\n\n";
+				return false;
 			}
 
 			cout << "Enter User Name: ";
@@ -55,11 +67,11 @@ private:
 
 public:
 
-	static void ShowLoginScreen()
+	static bool ShowLoginScreen()
 	{
 		system("cls");
 		_DrawScreenHeader("\t  Login Screen");
-		_Login();
+		return _Login();
 	}
 };
    
