@@ -61,6 +61,12 @@
     <ClInclude Include="clsFindUserScreen.h">
       <Filter>Header Files\User Screens</Filter>
     </ClInclude>
+    <ClInclude Include="clsLoginScreen.h">
+      <Filter>Header Files\Core Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
