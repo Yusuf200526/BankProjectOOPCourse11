@@ -8,6 +8,7 @@
 #include"clsFindClientScreen.h"
 #include"clsTransactionScreen.h"
 #include"clsManageUsersScreen.h"
+#include"clsLoginScreen.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
 #include"Global.h"
 using namespace std;
@@ -72,7 +73,7 @@ private:
 	static void _Logout()
 	{
 		CurrentUser = clsUser::Find("", "");
-
+		//clsLoginScreen::ShowLoginScreen();  // Wrong will cause error (circular calling) 
 		// then it will go back to login screen
 	}
 
