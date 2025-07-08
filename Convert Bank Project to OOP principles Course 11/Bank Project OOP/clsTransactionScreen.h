@@ -97,7 +97,7 @@ public:
 
 		system("cls");
 
-		_DrawScreenHeader("\tTransaction Menue");
+		_DrawScreenHeader("\tTransaction Screen");
 
 		cout << setw(37) << left << "" << "=========================================\n";
 		cout << setw(37) << left << "" << "\t\t  Transaction Menue Screen\n";
