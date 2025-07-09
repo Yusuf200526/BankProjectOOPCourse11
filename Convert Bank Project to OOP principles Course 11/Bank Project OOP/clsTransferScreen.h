@@ -3,6 +3,7 @@
 #include"clsScreen.h"
 #include"clsBankClient.h"
 #include"C:\Users\YUSUF\source\repos\Libraries\clsInputValidate.h"
+#include"Global.h"
 class clsTransferScreen : protected clsScreen
 {
 private:
@@ -71,7 +72,7 @@ public:
 
 		if (toupper(Answer) == 'Y')
 		{
-			if (SourceClient.Transfer(Amount, DestinationClient))
+			if (SourceClient.Transfer(Amount, DestinationClient,CurrentUser.UserName))
 			{
 				cout << "\n\nTransfer Done Successfully\n\n";
 			}
