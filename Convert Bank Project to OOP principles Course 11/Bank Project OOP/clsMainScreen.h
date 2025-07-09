@@ -9,6 +9,7 @@
 #include"clsTransactionScreen.h"
 #include"clsManageUsersScreen.h"
 #include"clsLoginScreen.h"
+#include"clsLoginRegisterScreen.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
 #include"Global.h"
 using namespace std;
@@ -16,14 +17,16 @@ class clsMainScreen : protected clsScreen
 {
 private:
 
-	enum enMainMenueOptions { eShowListClients = 1, eAddNewClient = 2, eDeleteClient = 3,
-		eUpdateClient = 4, eFindClient = 5, eShowTransactionsMenue = 6, eShowManageUsersMenue = 7, eLogout = 8 };
+	enum enMainMenueOptions {
+		eShowListClients = 1, eAddNewClient = 2, eDeleteClient = 3,
+		eUpdateClient = 4, eFindClient = 5, eShowTransactionsMenue = 6, eShowManageUsersMenue = 7, eLoginRegister = 8, eLogout = 9
+	};
 
 
 	static short _ReadMainMenueOption()
 	{
-		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 8]? ";
-		return clsInputValidate::ReadIntNumberBetween(1, 8, "Choose from 1 to 8 only ");
+		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 9]? ";
+		return clsInputValidate::ReadIntNumberBetween(1, 9, "Choose from 1 to 9 only ");
 	}
 
 	static void _GoBackToMainMenue()
@@ -68,6 +71,12 @@ private:
 	{
 		/*cout << " Manage users Menue screeen will be here soon \n";*/
 		clsManageUsersScreen::ShowManageUsersMenue();
+	}
+
+	static void _ShowLoginRegisterScreen()
+	{
+		//cout << "Login Register screen will be here just a minute ...";
+		clsLoginRegisterScreen::ShowLoginRegisterScreen();
 	}
 
 	static void _Logout()
@@ -132,6 +141,13 @@ private:
 			_GoBackToMainMenue();
 			break;
 		}
+		case enMainMenueOptions::eLoginRegister:
+		{
+			system("cls");
+			_ShowLoginRegisterScreen();
+			_GoBackToMainMenue();
+			break;
+		}
 		case enMainMenueOptions::eLogout:
 		{
 			system("cls");
@@ -154,14 +170,15 @@ public:
 		cout << setw(37) << left << "" << "=========================================\n";
 		cout << setw(37) << left << "" << "\t\t  Main Menue Screen\n";
 		cout << setw(37) << left << "" << "=========================================\n";
-		cout << setw(37) << left << "" << " [1] Show Client Screen. \n";
-		cout << setw(37) << left << "" << " [2] Add New Client. \n";
-		cout << setw(37) << left << "" << " [3] Delete Client. \n";
-		cout << setw(37) << left << "" << " [4] Update Client. \n";
-		cout << setw(37) << left << "" << " [5] Find Client. \n";
+		cout << setw(37) << left << "" << " [1] Show Client Screen.\n";
+		cout << setw(37) << left << "" << " [2] Add New Client.\n";
+		cout << setw(37) << left << "" << " [3] Delete Client.\n";
+		cout << setw(37) << left << "" << " [4] Update Client.\n";
+		cout << setw(37) << left << "" << " [5] Find Client.\n";
 		cout << setw(37) << left << "" << " [6] Transactions\n";
-		cout << setw(37) << left << "" << " [7] Manage Users. \n";
-		cout << setw(37) << left << "" << " [8] Logout. \n";
+		cout << setw(37) << left << "" << " [7] Manage Users.\n";
+		cout << setw(37) << left << "" << " [8] Login Register.\n";
+		cout << setw(37) << left << "" << " [9] Logout.\n";
 		cout << setw(37) << left << "" << "=========================================\n";
 
 		_PerformMainMenueOption((enMainMenueOptions)(_ReadMainMenueOption()));
