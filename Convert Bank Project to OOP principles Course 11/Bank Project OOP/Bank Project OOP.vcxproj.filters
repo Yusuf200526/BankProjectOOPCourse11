@@ -73,6 +73,7 @@
     <ClInclude Include="clsTransferScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="clsTransferLogScreen.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

@@ -78,7 +78,7 @@ public:
 			}
 			else
 			{
-				cout << "\n\nTransfer Faild\n";
+				cout << "\n\nTransfer Faild :-(\n";
 			}
 			_PrintClientCard(SourceClient);
 			_PrintClientCard(DestinationClient);
