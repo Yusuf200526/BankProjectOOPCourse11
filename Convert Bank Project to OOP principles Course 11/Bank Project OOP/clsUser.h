@@ -6,6 +6,7 @@
 #include"clsPerson.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsString.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsDate.h"
+#include"C:/Users/YUSUF/source/repos/Libraries/clsUtil.h"
 using namespace std;
 class clsUser: public clsPerson
 {
@@ -23,7 +24,7 @@ private:
 		vector <string> vUserData = clsString::Split(Line, Seperater);
 
 		return clsUser(clsUser::UpdateMode, vUserData[0], vUserData[1], vUserData[2], vUserData[3]
-			, vUserData[4], vUserData[5], stoi(vUserData[6]));
+			, vUserData[4], clsUtil::DecryptText(vUserData[5],5), stoi(vUserData[6]));
 	}
 
 	static clsUser _GetEmptyUserObject()
@@ -66,9 +67,10 @@ private:
 		stUserRecord += User.Email + Seperator;
 		stUserRecord += User.PhoneNumber + Seperator;
 		stUserRecord += User.UserName + Seperator;
-		stUserRecord += User.Password + Seperator;
+		stUserRecord += clsUtil::EncryptText(User.Password, 5) + Seperator;
 		stUserRecord += to_string(User.Permissions);
 
+		
 		return stUserRecord;
 	}
 
@@ -143,7 +145,7 @@ private:
 		string LoginRecord = "";
 		LoginRecord = clsDate::GetSystemDateTimeString() + Seperator;
 		LoginRecord += UserName + Seperator;
-		LoginRecord += Password + Seperator;
+		LoginRecord += clsUtil::EncryptText(Password, 5) + Seperator;
 		LoginRecord += to_string(Permissions);
 		return LoginRecord;
 	}
@@ -157,7 +159,7 @@ private:
 
 		LoginRegisterRecord.DateTime = vLoginRegisterDataLine[0];
 		LoginRegisterRecord.UserName = vLoginRegisterDataLine[1];
-		LoginRegisterRecord.Password = vLoginRegisterDataLine[2];
+		LoginRegisterRecord.Password = clsUtil::DecryptText(vLoginRegisterDataLine[2], 5);
 		LoginRegisterRecord.Permissions = stoi(vLoginRegisterDataLine[3]);
 
 		return LoginRegisterRecord;
