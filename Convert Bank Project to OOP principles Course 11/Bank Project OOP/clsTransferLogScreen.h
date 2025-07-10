@@ -8,11 +8,11 @@ class clsTransferLogScreen : protected clsScreen
     static void _PrintTransferLogRecordLine(clsBankClient::stTransferLogRecord TransferLogRecord)
     {
         cout << setw(8) << left << "" << "| " << left << setw(23) << TransferLogRecord.DateTime;
-        cout << "| " << left << setw(8) << TransferLogRecord.SourceAccount;
-        cout << "| " << left << setw(8) << TransferLogRecord.DestinationAccount;
+        cout << "| " << left << setw(8) << TransferLogRecord.SourceAccountNumber;
+        cout << "| " << left << setw(8) << TransferLogRecord.DestinationAccountNumber;
         cout << "| " << left << setw(8) << TransferLogRecord.Amount;
-        cout << "| " << left << setw(10) << TransferLogRecord.SourceBalance;
-        cout << "| " << left << setw(10) << TransferLogRecord.DestinationBalance;
+        cout << "| " << left << setw(10) << TransferLogRecord.scrBalanceAfter;
+        cout << "| " << left << setw(10) << TransferLogRecord.destBalanceAfter;
         cout << "| " << left << setw(8) << TransferLogRecord.UserName;
     }
 

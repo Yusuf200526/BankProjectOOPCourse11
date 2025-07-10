@@ -172,7 +172,7 @@ private:
 	 }
 
 	 struct stTransferLogRecord;
-	 static stTransferLogRecord _ConvertLineToTransferLogRecord(string Line,string Seperator="#//#")
+	 static stTransferLogRecord _ConvertTransferLogLineToRecord(string Line,string Seperator="#//#")
 	 {
 		 vector<string> vTransferLogDataLine;
 		 stTransferLogRecord stTransferLogRecord;
@@ -180,11 +180,11 @@ private:
 		 vTransferLogDataLine = clsString::Split(Line, Seperator);
 
 		 stTransferLogRecord.DateTime = vTransferLogDataLine[0];
-		 stTransferLogRecord.SourceAccount = vTransferLogDataLine[1];
-		 stTransferLogRecord.DestinationAccount = vTransferLogDataLine[2];
+		 stTransferLogRecord.SourceAccountNumber = vTransferLogDataLine[1];
+		 stTransferLogRecord.DestinationAccountNumber = vTransferLogDataLine[2];
 		 stTransferLogRecord.Amount = stod(vTransferLogDataLine[3]);
-		 stTransferLogRecord.SourceBalance = stod(vTransferLogDataLine[4]);
-		 stTransferLogRecord.DestinationBalance = stod(vTransferLogDataLine[5]);
+		 stTransferLogRecord.scrBalanceAfter = stod(vTransferLogDataLine[4]);
+		 stTransferLogRecord.destBalanceAfter = stod(vTransferLogDataLine[5]);
 		 stTransferLogRecord.UserName = vTransferLogDataLine[6];
 
 		 return stTransferLogRecord;
@@ -204,11 +204,11 @@ public:
 	struct stTransferLogRecord
 	{
 		string DateTime;
-		string SourceAccount;
-		string DestinationAccount;
+		string SourceAccountNumber;
+		string DestinationAccountNumber;
 		double Amount;
-		double SourceBalance;
-		double DestinationBalance;
+		double scrBalanceAfter;
+		double destBalanceAfter;
 		string UserName;
 	};
 
@@ -456,7 +456,7 @@ public:
 
 			while (getline(MyFile, Line))
 			{
-				TransferLogRecord = _ConvertLineToTransferLogRecord(Line);
+				TransferLogRecord = _ConvertTransferLogLineToRecord(Line);
 				vTransferLogRecord.push_back(TransferLogRecord);
 			}
 		}
