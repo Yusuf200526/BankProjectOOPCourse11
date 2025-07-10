@@ -20,12 +20,19 @@ This is a beginner-to-intermediate level project that simulates a simple banking
 * `Person`: Base class for people in the system.
 * `Client`: Inherits from `Person`, represents bank clients with data like balance, account number, etc.
 * `User`: Represents system users with login credentials, encrypted passwords, roles, and permissions.
+* `LoginRegister`: Handles login logs and timestamped records.
+* `TransferLog`: Records all account transfers and stores full history.
+* `Date`: A class to manage date-related operations.
+* `InputValidation`: Ensures user inputs are sanitized and validated.
+* `BankingOperations`: Includes all business logic functions like deposit, withdraw, transfer, etc.
+* `UIHelper`: Contains shared UI components like menus and headers.
+* `Global`: Manages shared global values like active user info (`CurrentUser`) so that the currently logged-in user's data is accessible across all screens and business logic.
 
-### 🖥️ UI Screens
+### 💻 UI Screens
 
 * `Screen`: Base class for all screen components.
-* `MainScreen`: Inherits from `Screen`, shows the main dashboard and navigation menu.
-* `TransactionsScreen`: Handles all transaction-related operations:
+* `MainScreen`: Inherits from `Screen`, shows the main dashboard and navigation menu. It's the primary screen that links to all other system components.
+* `TransactionsScreen`: Submenu that handles all transaction-related operations:
 
   * Deposit
   * Withdraw
@@ -33,7 +40,8 @@ This is a beginner-to-intermediate level project that simulates a simple banking
   * Transfer money between accounts
   * View transfer logs
   * Return to main menu
-* `ManageUsersScreen`: Manages system users, including:
+* `TransferScreen`: Interface for transferring funds between clients.
+* `ManageUsersScreen`: Submenu for managing system users, including:
 
   * Show list of users
   * Add user
@@ -43,11 +51,19 @@ This is a beginner-to-intermediate level project that simulates a simple banking
   * Return to main menu
 * `LoginScreen`: Handles the login process with username and password input, displaying up to 3 attempts before system denial.
 * `LoginRegisterScreen`: Displays login records with username, login time, and date.
-* Every screen shows the current date/time and the active user's name in the header.
+
+Every screen shows the current date/time and the active user's name in the header.
 
 ### ⚙️ Business Logic (Non-UI)
 
 * `BankingOperations` or `BusinessLogic`: Contains the actual implementation for deposit, withdraw, transfer, and related logic. It has no UI and focuses only on the core functionality of the system.
+
+### 📂 Project Files Used
+
+* `LoginRegister.txt`: Stores login records with usernames and timestamps.
+* `TransferLog.txt`: Stores records of all transfer transactions.
+* `Users.txt`: Stores encrypted user credentials and permissions.
+* `Clients.txt`: Stores all client data including balances and account info.
 
 ---
 
@@ -87,9 +103,13 @@ This is a beginner-to-intermediate level project that simulates a simple banking
 * Login records saved with timestamp
 * Encrypted password storage (even when shown in logs)
 
-### 🤭 Navigation
+### �� Navigation
 
-* Main dashboard and navigation menu
+* Main navigation through `MainScreen`
+* Two major sub-navigation menus:
+
+  * `TransactionsScreen`: Links to Deposit, Withdraw, Show Total Balances, Transfer, and Transfer Logs
+  * `ManageUsersScreen`: Links to Add, Delete, Update, Show List, and Find Users
 * All screens show:
 
   * Active user’s username
@@ -97,13 +117,7 @@ This is a beginner-to-intermediate level project that simulates a simple banking
 
 ---
 
-## ⚖️ In Progress
-
-* Advanced permission roles and audit logging features.
-
----
-
-## 🛠️ Technologies Used
+## 💠 Technologies Used
 
 * **Language:** C++
 * **Paradigm:** Object-Oriented Programming (OOP)
@@ -113,7 +127,7 @@ This is a beginner-to-intermediate level project that simulates a simple banking
 
 ---
 
-## 🧠 What I Learned
+## 🤔 What I Learned
 
 * The practical difference between Functional Programming and Object-Oriented Programming.
 * How to design and structure a real-world program using classes and inheritance.
