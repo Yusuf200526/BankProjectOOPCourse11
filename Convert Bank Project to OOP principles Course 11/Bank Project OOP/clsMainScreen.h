@@ -19,14 +19,15 @@ private:
 
 	enum enMainMenueOptions {
 		eShowListClients = 1, eAddNewClient = 2, eDeleteClient = 3,
-		eUpdateClient = 4, eFindClient = 5, eShowTransactionsMenue = 6, eShowManageUsersMenue = 7, eLoginRegister = 8, eLogout = 9
+		eUpdateClient = 4, eFindClient = 5, eShowTransactionsMenue = 6,
+		eShowManageUsersMenue = 7, eLoginRegister = 8, eCurrencyExchange = 9, eLogout = 10
 	};
 
 
 	static short _ReadMainMenueOption()
 	{
-		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 9]? ";
-		return clsInputValidate::ReadIntNumberBetween(1, 9, "Choose from 1 to 9 only ");
+		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 10]? ";
+		return clsInputValidate::ReadIntNumberBetween(1, 10, "Choose from 1 to 10 only ");
 	}
 
 	static void _GoBackToMainMenue()
@@ -77,6 +78,11 @@ private:
 	{
 		//cout << "Login Register screen will be here just a minute ...";
 		clsLoginRegisterScreen::ShowLoginRegisterScreen();
+	}
+
+	static void _ShowCurrencyExchangeScreen()
+	{
+		cout << "Currency Exchange Screen will be here soon...";
 	}
 
 	static void _Logout()
@@ -148,6 +154,13 @@ private:
 			_GoBackToMainMenue();
 			break;
 		}
+		case enMainMenueOptions::eCurrencyExchange:
+		{
+			system("cls");
+			_ShowCurrencyExchangeScreen();
+			_GoBackToMainMenue();
+			break;
+		}
 		case enMainMenueOptions::eLogout:
 		{
 			system("cls");
@@ -178,7 +191,8 @@ public:
 		cout << setw(37) << left << "" << " [6] Transactions\n";
 		cout << setw(37) << left << "" << " [7] Manage Users.\n";
 		cout << setw(37) << left << "" << " [8] Login Register.\n";
-		cout << setw(37) << left << "" << " [9] Logout.\n";
+		cout << setw(37) << left << "" << " [9] Currency Exchange.\n";
+		cout << setw(37) << left << "" << " [10] Logout.\n";
 		cout << setw(37) << left << "" << "=========================================\n";
 
 		_PerformMainMenueOption((enMainMenueOptions)(_ReadMainMenueOption()));
