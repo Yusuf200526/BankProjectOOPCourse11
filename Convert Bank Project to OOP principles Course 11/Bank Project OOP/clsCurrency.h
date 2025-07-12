@@ -51,6 +51,7 @@ private:
 			}
 			MyFile.close();
 		}
+		return _vCurrencies;
 	}
 
 	void _Update()
@@ -171,7 +172,7 @@ public:
 
 	static vector<clsCurrency> GetCurrencyList()
 	{
-		_LoadCurrencyDataFromFile();
+		return _LoadCurrencyDataFromFile();
 	}
 
 };
