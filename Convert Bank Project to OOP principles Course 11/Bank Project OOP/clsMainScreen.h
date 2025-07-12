@@ -10,6 +10,7 @@
 #include"clsManageUsersScreen.h"
 #include"clsLoginScreen.h"
 #include"clsLoginRegisterScreen.h"
+#include"clsCurrencyExchangeMainScreen.h"
 #include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
 #include"Global.h"
 using namespace std;
@@ -80,9 +81,10 @@ private:
 		clsLoginRegisterScreen::ShowLoginRegisterScreen();
 	}
 
-	static void _ShowCurrencyExchangeScreen()
+	static void _ShowCurrencyExchangeMainScreen()
 	{
-		cout << "Currency Exchange Screen will be here soon...";
+		//cout << "Currency Exchange Screen will be here soon...";
+		clsCurrencyExchangeMainScreen::ShowCurrenciesMenueItems();
 	}
 
 	static void _Logout()
@@ -157,7 +159,7 @@ private:
 		case enMainMenueOptions::eCurrencyExchange:
 		{
 			system("cls");
-			_ShowCurrencyExchangeScreen();
+			_ShowCurrencyExchangeMainScreen();
 			_GoBackToMainMenue();
 			break;
 		}

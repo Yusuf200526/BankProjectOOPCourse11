@@ -76,6 +76,10 @@
     <ClInclude Include="clsTransferLogScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="clsCurrency.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsCurrencyExchangeMainScreen.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
