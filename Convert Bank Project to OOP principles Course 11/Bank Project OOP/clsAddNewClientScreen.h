@@ -2,7 +2,7 @@
 #include<iostream>
 #include"clsScreen.h"
 #include"clsBankClient.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 using namespace std;
 class clsAddNewClientScreen :protected clsScreen
 {
@@ -26,7 +26,7 @@ private:
 		Client1.PinCode = clsInputValidate::ReadString();
 
 		cout << "\nEnter Account Balance: ";
-		Client1.AccountBalance = clsInputValidate::ReadDblNumber();
+		Client1.AccountBalance = clsInputValidate::ReadNumber<double>();
 
 	}
 

@@ -2,7 +2,7 @@
 #include<iostream>
 #include"clsScreen.h"
 #include"clsCurrency.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 using namespace std;
 class clsUpdateCurrencyRateScreen: protected clsScreen
 {
@@ -50,7 +50,7 @@ public:
 			cout << "Update Currency Rate\n";
 			cout << "___________________________\n\n";
 			cout << "Enter New Rate: ";
-			Currency.Rate = clsInputValidate::ReadPostiveDblNumber();
+			Currency.Rate = clsInputValidate::ReadPostiveNumber<double>();
 	
 			cout << "\nCurrency Rate Updated Successfully :-)\n";
 

@@ -2,7 +2,7 @@
 #include<iostream>
 #include"clsScreen.h"
 #include"clsBankClient.h"
-#include"C:\Users\YUSUF\source\repos\Libraries\clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 #include"Global.h"
 class clsTransferScreen : protected clsScreen
 {
@@ -38,12 +38,12 @@ private:
 
 		cout << "\n\nEnter Transfer Amount? ";
 
-		Amount = clsInputValidate::ReadDblNumber();
+		Amount = clsInputValidate::ReadPostiveNumber<float>();
 
 		while (Amount > SourceClient.AccountBalance)
 		{
 			cout << "Amount Exeeds The Balance , Enter another Amount ";
-			Amount = clsInputValidate::ReadDblNumber();
+			Amount = clsInputValidate::ReadPostiveNumber  <float>();
 		}
 
 		return Amount;

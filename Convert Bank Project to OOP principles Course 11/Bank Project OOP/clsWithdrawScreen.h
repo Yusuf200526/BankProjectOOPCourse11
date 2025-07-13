@@ -2,7 +2,7 @@
 #include<iostream>
 #include"clsScreen.h"
 #include"clsBankClient.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 class clsWithdrawScreen: protected clsScreen
 {
 private:
@@ -45,7 +45,7 @@ public:
 
 		double Amount = 0;
 		cout << "\nPlease Enter Withdraw amount ?  ";
-		Amount = clsInputValidate::ReadPostiveDblNumber("Withdraw Amount Must be positive!  ");
+		Amount = clsInputValidate::ReadPostiveNumber<double>("Withdraw Amount Must be positive!  ");
 
 		cout << "\nAre you sure you want to perform this transaction y/n ?  ";
 		char Answer = 'n';

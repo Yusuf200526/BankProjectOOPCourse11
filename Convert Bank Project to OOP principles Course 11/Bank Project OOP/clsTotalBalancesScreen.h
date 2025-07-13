@@ -4,8 +4,8 @@
 #include<string>
 #include"clsScreen.h"
 #include"clsBankClient.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsUtil.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsUtil.h"
 class clsTotalBalancesScreen :protected clsScreen
 {
 

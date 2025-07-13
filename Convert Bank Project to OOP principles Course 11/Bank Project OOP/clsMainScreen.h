@@ -11,7 +11,7 @@
 #include"clsLoginScreen.h"
 #include"clsLoginRegisterScreen.h"
 #include"clsCurrencyExchangeMainScreen.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 #include"Global.h"
 using namespace std;
 class clsMainScreen : protected clsScreen
@@ -28,7 +28,7 @@ private:
 	static short _ReadMainMenueOption()
 	{
 		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 10]? ";
-		return clsInputValidate::ReadIntNumberBetween(1, 10, "Choose from 1 to 10 only ");
+		return clsInputValidate::ReadNumberBetween<int>(1, 10, "Choose from 1 to 10 only ");
 	}
 
 	static void _GoBackToMainMenue()

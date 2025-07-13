@@ -7,7 +7,7 @@
 #include"clsDeleteUserScreen.h"
 #include"clsUpdateUserScreen.h"
 #include"clsFindUserScreen.h"
-#include"C:\Users\YUSUF\source\repos\Libraries\clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 using namespace std;
 class clsManageUsersScreen : protected clsScreen
 {
@@ -20,7 +20,7 @@ private:// Abstracted // Built skeleton of the manage users menue screen useing 
 	static short _ReadManageUsersMenueOption()
 	{
 		cout << setw(37) << left << "" << "Choose what you wants to do? [1 to 6]? ";
-		return clsInputValidate::ReadIntNumberBetween(1, 6, "Choose from 1 to 6 only ");
+		return clsInputValidate::ReadNumberBetween<int>(1, 6, "Choose from 1 to 6 only ");
 	}
 
 	static void _GoBackToManageUsersMenue()

@@ -2,7 +2,7 @@
 #include<iostream>
 #include"clsScreen.h"
 #include"clsCurrency.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 class clsCurrencyCalculaterScreen : protected clsScreen
 {
 
@@ -79,7 +79,7 @@ public:
 			clsCurrency CurrencyTo = _GetCurrency("Please Enter Currency2 Code: ");
 
 			cout << "Enter Amount To Exchange ";
-			double Amount = clsInputValidate::ReadPostiveDblNumber();
+			double Amount = clsInputValidate::ReadPostiveNumber<double>();
 
 			_PrintCalculationResult(Amount, CurrencyFrom, CurrencyTo);
 

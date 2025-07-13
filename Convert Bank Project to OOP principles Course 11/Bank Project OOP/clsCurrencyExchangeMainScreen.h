@@ -2,7 +2,7 @@
 #include<iostream>
 #include<iomanip>
 #include"clsScreen.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 #include"clsCurrenciesListScreen.h";
 #include"clsFindCurrencyScreen.h"
 #include"clsUpdateCurrencyRateScreen.h"
@@ -20,7 +20,7 @@ private:
 	static short _ReadCurrencyExchangeMainScreenOption()
 	{
 		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 5]? ";
-		return clsInputValidate::ReadIntNumberBetween(1, 5, "Choose from 1 to 5 only ");
+		return clsInputValidate::ReadNumberBetween<int>(1, 5, "Choose from 1 to 5 only ");
 	}
 
 	static void _GoBackToCurrencyExchangeMainScreen()

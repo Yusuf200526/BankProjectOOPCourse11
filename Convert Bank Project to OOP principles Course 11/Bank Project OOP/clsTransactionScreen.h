@@ -1,7 +1,7 @@
 #pragma once
 #include<iostream>
 #include<iomanip>
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 #include"clsBankClient.h"
 #include"clsScreen.h"
 #include"clsDepositScreen.h"
@@ -25,7 +25,7 @@ private:
 	static short _ReadTransactionMenueOption()
 	{
 		cout << setw(37) << left << "" << "choose what you wants to do?  [1 to 6]?  ";
-		return clsInputValidate::ReadIntNumberBetween(1, 6, "Choose from 1 to 6 only ");
+		return clsInputValidate::ReadNumberBetween<int>(1, 6, "Choose from 1 to 6 only ");
 	}
 
 	 

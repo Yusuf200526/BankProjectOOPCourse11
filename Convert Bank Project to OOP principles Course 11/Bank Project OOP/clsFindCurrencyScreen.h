@@ -2,7 +2,7 @@
 #include<iostream>
 #include"clsScreen.h"
 #include"clsCurrency.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 using namespace std;
 class clsFindCurrencyScreen : protected clsScreen
 {
@@ -40,7 +40,7 @@ public:
 		cout << "\nFind By: [1] Code or [2] Country ? ";
 		short Answer = 1;
 
-		Answer = clsInputValidate::ReadIntNumberBetween(1, 2);
+		Answer = clsInputValidate::ReadNumberBetween<int>(1, 2);
 
 		if (Answer == 1)
 		{

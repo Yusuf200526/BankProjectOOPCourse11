@@ -4,9 +4,9 @@
 #include<fstream>
 #include<vector>
 #include"clsPerson.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsString.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsDate.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsUtil.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsString.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsDate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsUtil.h"
 using namespace std;
 class clsUser: public clsPerson
 {

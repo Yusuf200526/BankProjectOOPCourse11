@@ -3,7 +3,7 @@
 #include"clsScreen.h"
 #include<iomanip>
 #include"clsBankClient.h"
-#include"C:/Users/YUSUF/source/repos/Libraries/clsInputValidate.h"
+#include"C:\Users\YUSUF\My Repos\LIbraries\clsInputValidate.h"
 using namespace std;
 class clsDeleteClientScreen :protected clsScreen
 {
