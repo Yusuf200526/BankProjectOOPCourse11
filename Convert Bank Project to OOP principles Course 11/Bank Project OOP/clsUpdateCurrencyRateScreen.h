@@ -32,7 +32,7 @@ public:
 		while (!clsCurrency::IsCurrencyExist(CurrencyCode))
 		{
 			cout << "\nCurrency is Not Correct , Enter agian ";
-			string CurrencyCode = clsInputValidate::ReadString();
+		    CurrencyCode = clsInputValidate::ReadString();
 		}
 
 		clsCurrency Currency = clsCurrency::FindByCode(CurrencyCode);

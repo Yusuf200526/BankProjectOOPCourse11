@@ -83,6 +83,7 @@
     <ClInclude Include="clsCurrenciesListScreen.h" />
     <ClInclude Include="clsFindCurrencyScreen.h" />
     <ClInclude Include="clsUpdateCurrencyRateScreen.h" />
+    <ClInclude Include="clsCurrencyCalculaterScreen.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
