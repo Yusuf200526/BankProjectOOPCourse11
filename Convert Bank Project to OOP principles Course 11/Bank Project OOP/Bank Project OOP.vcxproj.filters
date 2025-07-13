@@ -81,6 +81,7 @@
     </ClInclude>
     <ClInclude Include="clsCurrencyExchangeMainScreen.h" />
     <ClInclude Include="clsCurrenciesListScreen.h" />
+    <ClInclude Include="clsFindCurrencyScreen.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

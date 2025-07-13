@@ -170,6 +170,7 @@ public:
 		return(!Currency.IsEmpty());
 	}
 
+
 	static vector<clsCurrency> GetCurrencyList()
 	{
 		return _LoadCurrencyDataFromFile();

@@ -9,7 +9,7 @@ private:
 
 	static void _PrintUser(clsUser User)
 	{
-		cout << "\nClient Card : ";
+		cout << "\nUser Card : ";
 		cout << "\n___________________________";
 		cout << "\nUser Name        :" << User.UserName;
 		cout << "\nFirst Name       :" << User.FirstName;
@@ -52,7 +52,6 @@ public:
 		}
 
 
-		cout << "\n\nUser Card\n\n";
 		_PrintUser(User);
 
 	}
