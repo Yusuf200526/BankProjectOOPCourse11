@@ -54,10 +54,50 @@ private:
 		return _vCurrencies;
 	}
 
+	static string _ConvertCurrencyObjectToLine(clsCurrency Currency,string Seperator="#//#")
+	{
+		string stCurrencyDataLine;
+
+		stCurrencyDataLine = Currency.Country + Seperator;
+		stCurrencyDataLine += Currency.CurrencyCode + Seperator;
+		stCurrencyDataLine += Currency.CurrencyName + Seperator;
+		stCurrencyDataLine += to_string(Currency.Rate);
+
+		return stCurrencyDataLine;
+	}
+
+	static void _SaveCurrencyDataToFile(vector<clsCurrency> _vCurrencies)
+	{
+		fstream MyFile;
+
+		MyFile.open("Currencies.txt", ios::out); //overwrite
+
+		if (MyFile.is_open())
+		{
+			string DataLine;
+			for (clsCurrency& Currency : _vCurrencies)
+			{
+				DataLine = _ConvertCurrencyObjectToLine(Currency);
+				MyFile << DataLine << endl;
+			}
+			MyFile.close();
+		}
+	}
+
 	void _Update()
 	{
 		vector<clsCurrency> _vCurrencies;
 		_vCurrencies = _LoadCurrencyDataFromFile();
+
+		for (clsCurrency& C : _vCurrencies)
+		{
+			if (C.CurrencyCode == CurrencyCode)
+			{
+				C = *this;
+				break;
+			}
+		}
+		_SaveCurrencyDataToFile(_vCurrencies);
 	}
 
 	static clsCurrency _GetEmptyCurrencyObject()
