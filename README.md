@@ -31,7 +31,7 @@ This is a beginner-to-intermediate level project that simulates a simple banking
 ### 💻 UI Screens
 
 * `Screen`: Base class for all screen components.
-* `MainScreen`: Inherits from `Screen`, shows the main dashboard and navigation menu. It's the primary screen that links to all other system components.
+* `MainScreen`: Shows the main dashboard and navigation menu. It's the primary screen that links to all other system components.
 * `TransactionsScreen`: Submenu that handles all transaction-related operations:
 
   * Deposit
@@ -39,20 +39,25 @@ This is a beginner-to-intermediate level project that simulates a simple banking
   * Show total balances
   * Transfer money between accounts
   * View transfer logs
-  * Return to main menu
 * `TransferScreen`: Interface for transferring funds between clients.
-* `ManageUsersScreen`: Submenu for managing system users, including:
+* `TransferLogScreen`: Displays all transfer records with sender, receiver, amount, balances after transfer, and timestamp.
+* `ManageUsersScreen`: Submenu for managing system users:
 
   * Show list of users
   * Add user
   * Delete user
   * Update user
   * Find user
-  * Return to main menu
-* `LoginScreen`: Handles the login process with username and password input, displaying up to 3 attempts before system denial.
+* `CurrencyExchangeScreen`: Submenu for managing currencies:
+
+  * Show list of currencies
+  * Find currency
+  * Update exchange rate
+  * Currency calculator (convert between currencies)
+* `LoginScreen`: Handles login attempts (max 3 tries) with username and password.
 * `LoginRegisterScreen`: Displays login records with username, login time, and date.
 
-Every screen shows the current date/time and the active user's name in the header.
+> All screens display the active user's name and the current date/time in the header.
 
 ### ⚙️ Business Logic (Non-UI)
 
@@ -64,6 +69,7 @@ Every screen shows the current date/time and the active user's name in the heade
 * `TransferLog.txt`: Stores records of all transfer transactions.
 * `Users.txt`: Stores encrypted user credentials and permissions.
 * `Clients.txt`: Stores all client data including balances and account info.
+* `Currencies.txt`: Stores all supported currencies and their exchange rates.
 
 ---
 
@@ -103,17 +109,21 @@ Every screen shows the current date/time and the active user's name in the heade
 * Login records saved with timestamp
 * Encrypted password storage (even when shown in logs)
 
-### �� Navigation
+### 🔁 Navigation
 
 * Main navigation through `MainScreen`
-* Two major sub-navigation menus:
+* Three major sub-navigation menus:
 
   * `TransactionsScreen`: Links to Deposit, Withdraw, Show Total Balances, Transfer, and Transfer Logs
   * `ManageUsersScreen`: Links to Add, Delete, Update, Show List, and Find Users
-* All screens show:
+  * `CurrencyExchangeScreen`: Links to Show List of Currencies, Find Currency, Update Exchange Rate, and Use Currency Calculator
 
-  * Active user’s username
-  * Current date and time
+### 💱 Currency Exchange Features
+
+* Show list of available currencies with their exchange rates
+* Find currency by code or name
+* Update exchange rate for any currency
+* Currency calculator to convert between different currencies based on the latest rates
 
 ---
 
@@ -148,3 +158,18 @@ Every screen shows the current date/time and the active user's name in the heade
 2. Open the project in **Visual Studio Community**.
 3. Build and run the project from the `main.cpp` file.
 4. Follow the instructions on the console-based interface.
+
+---
+
+## 📌 Version History
+
+### 🔖 v1.0.0
+
+* Initial release with basic client management, transaction features, user management, and authentication system.
+
+### 🔖 v1.1.0
+
+* Added full **Currency Exchange** module with screen and business logic.
+* Supports showing, finding, and updating currency rates.
+* Added currency conversion calculator.
+* Added `Currencies.txt` file for data persistence.
